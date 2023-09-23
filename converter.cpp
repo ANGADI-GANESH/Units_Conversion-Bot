@@ -1,6 +1,7 @@
 #include<iostream>
 #include<iomanip>
 #include<stdlib.h>
+#include<string>
 using namespace std;
 void lengthconvertor();
 void weightconvertor();
@@ -12,19 +13,30 @@ void areaconverting(double value, int from, int to);
 void volumeconverting(double value, int from, int to);
 int main() 
 {
+    string username, password;
+    string validUsername = "ganesh";
+    string validPassword = "hclproject";
+    cout << "Enter username: ";
+    cin >> username;
+    cout << "Enter password: ";
+    cin >> password;
 
-int option;
-cout<<"******Hello! Welcome to Informative Bot******"<<endl;
-cout<<"********units conversions********"<<endl;
-cout<<"1.Length convertor"<<endl;
-cout<<"2.Weight convertor"<<endl;
-cout<<"3.Area convertor"<<endl;
-cout<<"4.Volume convertor"<<endl;
-cout<<"select above the one of the convertor: ";
-cin>>option;
-system("clear");  
-switch(option)
-{
+    
+    if (username == validUsername && password == validPassword) 
+    {
+        cout << "Login successful!" <<endl;
+        int option;
+        cout<<"******Hello! Welcome to Informative Bot******"<<endl;
+        cout<<"********units conversions********"<<endl;
+        cout<<"1.Length convertor"<<endl;
+        cout<<"2.Weight convertor"<<endl;
+        cout<<"3.Area convertor"<<endl;
+        cout<<"4.Volume convertor"<<endl;
+        cout<<"select above the one of the convertor: ";
+        cin>>option;
+        system("clear");  
+    switch(option)
+    {
     case 1:
     lengthconvertor();
     break;
@@ -39,29 +51,37 @@ switch(option)
     break;
     default:
     break;
+    }
+    } 
+    else 
+    {
+        cout << "Login failed. Invalid username or password." << endl;
+    }
+
+    return 0;
 }
-}
+
 void lengthconvertor()
 {
     cout << "Length Units Conversions " << endl;
-int from, to;
-double value;
+    int from, to;
+    double value;
 
-cout << "Available conversions are:" << endl;
-cout << "1. Meter" << endl;
-cout << "2. Centimeter" << endl;
-cout << "3. Kilometer" << endl;
-cout << "4. Millimeter"<<endl;
-cout << "Select from which unit to convert: ";
-cin >> from;
+    cout << "Available conversions are:" << endl;
+    cout << "1. Meter" << endl;
+    cout << "2. Centimeter" << endl;
+    cout << "3. Kilometer" << endl;
+    cout << "4. Millimeter"<<endl;
+    cout << "Select from which unit to convert: ";
+    cin >> from;
 
-cout << "Enter the value: ";
-cin >> value;
+    cout << "Enter the value: ";
+    cin >> value;
 
-cout << "Select to which unit it should convert: ";
-cin >> to;
+   cout << "Select to which unit it should convert: ";
+   cin >> to;
 
-lengthconverting(value, from, to);
+   lengthconverting(value, from, to);
     
 }
 void lengthconverting(double value, int from, int to) 
@@ -478,7 +498,6 @@ else if (from == 4)
     }
 }
 }
-
 
 
 
