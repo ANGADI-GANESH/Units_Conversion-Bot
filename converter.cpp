@@ -2,6 +2,7 @@
 #include<iomanip>
 #include<stdlib.h>
 #include<string>
+
 using namespace std;
 void lengthconvertor();
 void weightconvertor();
@@ -23,7 +24,8 @@ int main()
 
     
     if (username == validUsername && password == validPassword) 
-    {
+    {   
+        
         cout << "Login successful!" <<endl;
         int option;
         cout<<"******Hello! Welcome to Informative Bot******"<<endl;
@@ -124,7 +126,7 @@ else if (from == 2)
     }
     else if (to == 3) 
     {
-        convertedValue = value * 100000;
+        convertedValue = value / 100000;
         cout << "Converting " << value << " centimeters is equal to " << convertedValue << " kilometers";
     }
     else if (to == 4)
@@ -143,7 +145,7 @@ else if (from == 3)
     else if (to == 2)
     {
         convertedValue = value * 100000;
-        cout << "Converting " << value << " kilometers is equal to " << convertedValue << " centimeters";
+        cout << "Converting " << value << " kilometers is equal to " <<setprecision(20)<< convertedValue << " centimeters";
     } 
     else if (to == 3)
     {
@@ -153,7 +155,7 @@ else if (from == 3)
     else if (to == 4)
     {
         convertedValue = value * 1000000;
-        cout << "Conerting " << value << " kilometer is equal to " << convertedValue << " millimeter";
+        cout << "Conerting " << value << " kilometer is equal to " <<setprecision(20) << convertedValue << " millimeter";
     }
 }
 else if (from == 4)
@@ -161,22 +163,23 @@ else if (from == 4)
     if (to == 1)
     {
         convertedValue = value / 1000;
-        cout << "Converting "<<value<<"Millimeter is equal to"<<convertedValue<<" meters";
+        cout << "Converting "<<value<<" Millimeter is equal to "<<convertedValue<<" meters";
     }
     else if(to == 2)
     {
         convertedValue = value / 10;
-        cout << "Converting "<<value<<"Millimeter is equal to"<<convertedValue<<" centimeter";
+        cout << "Converting "<<value<<" Millimeter is equal to "<<convertedValue<<" centimeter";
     }
     else if(to == 3)
     {
+        int decimalprecision=2;
         convertedValue = value / 1000000;
-        cout << "Converting "<<value<<"Millimeter is equal to"<<convertedValue<<" kilometer";
+        cout << "Converting "<<value<<" Millimeter is equal to "<<setprecision(decimalprecision)<<convertedValue<<" kilometer";
     }
     else if(to == 4)
     {
         convertedValue = value;
-        cout << "Converting "<<value<<"Millimeter is equal to"<<convertedValue<<" millimeter";
+        cout << "Converting "<<value<<" Millimeter is equal to "<<convertedValue<<" millimeter";
     }
 }
 }
@@ -236,7 +239,7 @@ else if (from == 2)
     else if (to == 3) 
     {
         convertedValue = value * 1000000;
-        cout << "Converting " << value << " kilograms is equal to " << convertedValue << " milligrams";
+        cout << "Converting " << value << " kilograms is equal to " << setprecision(20) << convertedValue << " milligrams";
     }
     
 }
@@ -291,22 +294,22 @@ if (from == 1)
     if (to == 1) 
     {
         convertedValue = value;
-        cout << "Converting " << value << "square meters is equal to " << convertedValue << "square meters";
+        cout << "Converting " << value << " square meters is equal to " << convertedValue << " square meters";
     } 
     else if (to == 2)
     {
         convertedValue = value * 10000;
-        cout << "Converting " << value << "square meters is equal to " << convertedValue << "square centimeters";
+        cout << "Converting " << value << " square meters is equal to " << convertedValue << " square centimeters";
     } 
     else if (to == 3) 
     {
         convertedValue = value / 1000000;
-        cout << "Converting " << value << "square meters is equal to " << convertedValue << "square kilometers";
+        cout << "Converting " << value << " square meters is equal to " <<convertedValue << " square kilometers";
     }
     else if (to == 4)
     {
         convertedValue = value * 1000000;
-        cout << "Converting " << value << "square meter is equal to " << convertedValue << "square  millimeter";
+        cout << "Converting " << value << " square meter is equal to " <<setprecision(20)<<convertedValue << " square  millimeter";
     }
 } 
 else if (from == 2)
@@ -314,22 +317,22 @@ else if (from == 2)
     if (to == 1)
     {
         convertedValue = value / 10000;
-        cout << "Converting " << value << "square centimeters is equal to " << convertedValue << "square meters";
+        cout << "Converting " << value << " square centimeters is equal to " << convertedValue << " square meters";
     } 
     else if (to == 2)
     {
         convertedValue = value;
-        cout << "Converting " << value << "square centimeters is equal to " << convertedValue << "square centimeters";
+        cout << "Converting " << value << " square centimeters is equal to " << convertedValue << " square centimeters";
     }
     else if (to == 3) 
     {
-        convertedValue = value * 10000000000;
-        cout << "Converting " << value << "square centimeters is equal to " << convertedValue << "square kilometers";
+        convertedValue = value / 10000000000;
+        cout << "Converting " << value << " square centimeters is equal to " << convertedValue << " square kilometers";
     }
     else if (to == 4)
     {
         convertedValue = value * 100;
-        cout << "Converting " << value << "square centimeters is equal to " << convertedValue << "square millimeter";
+        cout << "Converting " << value << " square centimeters is equal to " << convertedValue << " square millimeter";
     }
 }
 else if (from == 3) 
@@ -337,22 +340,22 @@ else if (from == 3)
     if (to == 1)
     {
         convertedValue = value * 1000000;
-        cout << "Converting " << value << "square kilometers is equal to " << convertedValue << "square meters";
+        cout << "Converting " << value << " square kilometers is equal to " <<setprecision(20)<<convertedValue << " square meters";
     } 
     else if (to == 2)
     {
         convertedValue = value * 10000000000;
-        cout << "Converting " << value << "square kilometers is equal to " << convertedValue << "square centimeters";
+        cout << "Converting " << value << " square kilometers is equal to " <<setprecision(20)<<convertedValue << " square centimeters";
     } 
     else if (to == 3)
     {
         convertedValue = value;
-        cout << "Converting " << value << "square kilometers is equal to " << convertedValue << "square kilometers";
+        cout << "Converting " << value << " square kilometers is equal to " << convertedValue << " square kilometers";
     }
     else if (to == 4)
     {
         convertedValue = value * 1000000000000;
-        cout << "Conerting " << value << "square kilometer is equal to " << convertedValue << "square millimeter";
+        cout << "Conerting " << value << " square kilometer is equal to " <<setprecision(20)<< convertedValue << " square millimeter";
     }
 }
 else if (from == 4)
@@ -360,22 +363,22 @@ else if (from == 4)
     if (to == 1)
     {
         convertedValue = value / 1000000;
-        cout << "Converting "<<value<<"Square Millimeter is equal to"<<convertedValue<<"square meters";
+        cout << "Converting "<<value<<" Square Millimeter is equal to "<< convertedValue<<" square meters";
     }
     else if(to == 2)
     {
         convertedValue = value / 100;
-        cout << "Converting "<<value<<"Square Millimeter is equal to"<<convertedValue<<"square centimeter";
+        cout << "Converting "<<value<<" Square Millimeter is equal to "<< convertedValue<<" square centimeter";
     }
     else if(to == 3)
     {
         convertedValue = value / 1000000000000;
-        cout << "Converting "<<value<<"Square Millimeter is equal to"<<convertedValue<<"square kilometer";
+        cout << "Converting "<<value<<" Square Millimeter is equal to "<< convertedValue<<" square kilometer";
     }
     else if(to == 4)
     {
         convertedValue = value;
-        cout << "Converting "<<value<<"Square Millimeter is equal to"<<convertedValue<<"square millimeter";
+        cout << "Converting "<<value<<" Square Millimeter is equal to "<< convertedValue<<" square millimeter";
     }
 }
 }
@@ -410,22 +413,22 @@ if (from == 1)
     if (to == 1) 
     {
         convertedValue = value;
-        cout << "Converting " << value << "cubic meters is equal to " << convertedValue << "cubic meters";
+        cout << "Converting " << value << " cubic meters is equal to " << convertedValue << " cubic meters";
     } 
     else if (to == 2)
     {
         convertedValue = value * 1000000;
-        cout << "Converting " << value << "cubic meters is equal to " << convertedValue << "cubic centimeters";
+        cout << "Converting " << value << " cubic meters is equal to " <<setprecision(20)<< convertedValue << " cubic centimeters";
     } 
     else if (to == 3) 
     {
-        convertedValue = value / 100000000;
-        cout << "Converting " << value << "cubic meters is equal to " << convertedValue << "cubic kilometers";
+        convertedValue = value / 1000000000;
+        cout << "Converting " << value << " cubic meters is equal to " << convertedValue << " cubic kilometers ";
     }
     else if (to == 4)
     {
         convertedValue = value * 1000000000;
-        cout << "Converting " << value << "cubic meter is equal to " << convertedValue << "cubic  millimeter";
+        cout << "Converting " << value << " cubic meter is equal to " << convertedValue << " cubic  millimeter";
     }
 } 
 else if (from == 2)
@@ -433,22 +436,22 @@ else if (from == 2)
     if (to == 1)
     {
         convertedValue = value / 1000000;
-        cout << "Converting " << value << "cubic centimeters is equal to " << convertedValue << "cubic meters";
+        cout << "Converting " << value << " cubic centimeters is equal to " << convertedValue << " cubic meters";
     } 
     else if (to == 2)
     {
         convertedValue = value;
-        cout << "Converting " << value << "cubic centimeters is equal to " << convertedValue << "cubic centimeters";
+        cout << "Converting " << value << " cubic centimeters is equal to " << convertedValue << " cubic centimeters";
     }
     else if (to == 3) 
     {
-        convertedValue = value * 10000000000000000;
-        cout << "Converting " << value << "cubic centimeters is equal to " << convertedValue << "cubic kilometers";
+        convertedValue = value / 10000000000000000;
+        cout << "Converting " << value << " cubic centimeters is equal to " << convertedValue << " cubic kilometers";
     }
     else if (to == 4)
     {
         convertedValue = value * 1000;
-        cout << "Converting " << value << "cubic centimeters is equal to " << convertedValue << "cubic millimeter";
+        cout << "Converting " << value << " cubic centimeters is equal to " << convertedValue << " cubic millimeter";
     }
 }
 else if (from == 3) 
@@ -456,22 +459,22 @@ else if (from == 3)
     if (to == 1)
     {
         convertedValue = value * 1000000000;
-        cout << "Converting " << value << "cubic kilometers is equal to " << convertedValue << "cubic meters";
+        cout << "Converting " << value << " cubic kilometers is equal to " <<setprecision(20)<< convertedValue << " cubic meters";
     } 
     else if (to == 2)
     {
         convertedValue = value * 1000000000000000;
-        cout << "Converting " << value << "cubic kilometers is equal to " << convertedValue << "cubic centimeters";
+        cout << "Converting " << value << " cubic kilometers is equal to " <<setprecision(20)<< convertedValue << " cubic centimeters";
     } 
     else if (to == 3)
     {
         convertedValue = value;
-        cout << "Converting " << value << "cubic kilometers is equal to " << convertedValue << "cubic kilometers";
+        cout << "Converting " << value << " cubic kilometers is equal to " << convertedValue << " cubic kilometers";
     }
     else if (to == 4)
     {
         convertedValue = value * 1000000000000000000;
-        cout << "Conerting " << value << "cubic kilometer is equal to " << convertedValue << "cubic millimeter";
+        cout << "Conerting " << value << " cubic kilometer is equal to " <<setprecision(20)<< convertedValue << " cubic millimeter";
     }
 }
 else if (from == 4)
@@ -479,25 +482,27 @@ else if (from == 4)
     if (to == 1)
     {
         convertedValue = value / 1000000000;
-        cout << "Converting "<<value<<"cubic Millimeter is equal to"<<convertedValue<<"cubic meters";
+        cout << "Converting "<<value<<" cubic Millimeter is equal to "<<convertedValue<<" cubic meters";
     }
     else if(to == 2)
     {
         convertedValue = value / 1000;
-        cout << "Converting "<<value<<"cubic Millimeter is equal to"<<convertedValue<<"cubic centimeter";
+        cout << "Converting "<<value<<" cubic Millimeter is equal to "<<convertedValue<<" cubic centimeter";
     }
     else if(to == 3)
     {
         convertedValue = value / 1000000000000000000;
-        cout << "Converting "<<value<<"cubic Millimeter is equal to"<<convertedValue<<"cubic kilometer";
+        cout << "Converting "<<value<<" cubic Millimeter is equal to "<<convertedValue<<" cubic kilometer";
     }
     else if(to == 4)
     {
         convertedValue = value;
-        cout << "Converting "<<value<<"cubic Millimeter is equal to"<<convertedValue<<"cubic millimeter";
+        cout << "Converting "<<value<<" cubic Millimeter is equal to "<<convertedValue<<" cubic millimeter";
     }
 }
 }
+
+
 
 
 
