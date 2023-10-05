@@ -1,2 +1,2 @@
-# Units_Conversion-Bot
-This Conversion Bot helps to converts mathematical units.
+# THE INFORMATIVE-BOT
+This informative bot helps the conversions of mathematical units.
